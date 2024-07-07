@@ -1,0 +1,15 @@
+import py4j.GatewayServer;
+
+public class DBConnection {
+    public String getData() {
+        return "Welcome to Integrate Java with Python";
+    }
+
+    public static void main(String[] args) {
+        // Create a gateway server instance and start it
+        DBConnection app = new DBConnection();
+        GatewayServer server = new GatewayServer(app);
+        server.start();
+        System.out.println("Gateway Server Started");
+    }
+}
